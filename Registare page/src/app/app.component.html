@@ -1,0 +1,52 @@
+<div class="registare">
+    
+  <div class="registare-image">
+      <img src="https://media.istockphoto.com/id/1281150061/vector/register-account-submit-access-login-password-username-internet-online-website-concept.jpg?s=612x612&w=0&k=20&c=9HWSuA9IaU4o-CK6fALBS5eaO1ubnsM08EOYwgbwGBo=" alt="vector-registration-image">
+ </div>
+  <div class="registare1">
+      <form action="">
+          <h1><span class="login1">Login</span><span class="login2">Here</span></h1>
+          
+          <input type="text" placeholder="Enter the name here" name="name" [(ngModel)]="name" required>
+          <input type="text" placeholder="Enter the Email here" name="email" [(ngModel)]="email" required>
+          <input type="number" placeholder="Enter mobile number here" name="number" [(ngModel)]="number" required>
+          <input type="date" placeholder="DOJ" name="doj" [(ngModel)]="doj" required>
+         <div class="gender-selection">
+               
+              <label>Gender:<input type="radio" name="gender" value="male" value="male" name="gender" [(ngModel)]="gender" required> Male</label>
+              <label><input type="radio" name="gender" value="female" value="female" name="gender" [(ngModel)]="gender" required> Female</label>
+              <label><input type="radio" name="gender" value="other" value="other" name="gender" [(ngModel)]="gender" required> Other</label>
+          </div>
+          <button class="btn" (click)="btnregister();">Submit</button>
+      </form>
+    </div>
+
+
+  </div>
+
+     
+
+      <table border="1">
+          <thead>
+          <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>number</th>
+            <th>doj</th>
+            <th>gender</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let objstulist of stulist;">
+            <td>{{objstulist.name}}</td>
+            <td>{{objstulist.email}}</td>
+            <td>{{objstulist.number}}</td>
+            <td>{{objstulist.doj}}</td>
+            <td>{{objstulist.gender}}</td>
+           <td><button (click)="deleteStudent(objstulist)" class="btndelete">Delete</button></td>
+           
+          </tr>
+      </tbody>
+    </table>
+      
+ 
