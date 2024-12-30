@@ -1,0 +1,27 @@
+<div *ngIf="data.length > 0; else noData">
+    <button routerLink="/add">Add</button>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Country</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of data">
+          <td>{{ row.name }}</td>
+          <td>{{ row.email }}</td>
+          <td>{{ row.country }}</td>
+          <td>
+            <button [routerLink]="['/edit', row.id]">Edit</button>
+            <button (click)="onDelete(row.id)">Delete</button>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noData>
+    <p>No data available.</p>
+  </ng-template>
