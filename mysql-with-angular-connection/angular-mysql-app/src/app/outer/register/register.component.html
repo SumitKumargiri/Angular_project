@@ -1,0 +1,37 @@
+<div class="popup-overlay" *ngIf="isVisible">
+  <div class="popup-content">
+    <span class="close-btn" (click)="closePopup()">&times;</span>
+    <h2>Register Here!</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="registerby">Register By:</label>
+        <select value="registerby" name="registerby" id="registerby" [(ngModel)]="registerby" required>
+          <option value="Employee">Employee</option>
+          <option value="job-seeker">Job Seeker</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+      </div>
+
+      <button type="submit" class="register-btn">Register</button>
+    </form>
+  </div>
+</div>

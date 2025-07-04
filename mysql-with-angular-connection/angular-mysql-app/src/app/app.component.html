@@ -1,0 +1,80 @@
+<!-- <div>
+  <h3>Data Table</h3>
+  <button (click)="openAddModal()">Add</button> 
+  
+  <table *ngIf="data && data.length > 0; else noData">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Country</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.country }}</td>
+        <td>
+          <button (click)="openEditForm(item)">Edit</button> 
+          <button (click)="deleteData(item.id)">Delete</button> 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noData>
+    <p>No data available.</p>
+  </ng-template>
+</div>
+
+<div *ngIf="isAddModalOpen" class="modal">
+  <div class="modal-content">
+    <h3>Add New Data</h3>
+    <form (ngSubmit)="addData()">
+      <label>
+        Name:
+        <input type="text" [(ngModel)]="newData.name" name="name" required />
+      </label>
+      <label>
+        Email:
+        <input type="email" [(ngModel)]="newData.email" name="email" required />
+      </label>
+      <label>
+        Country:
+        <input type="text" [(ngModel)]="newData.country" name="country" required />
+      </label>
+      <button type="submit">Add</button>
+      <button type="button" (click)="closeAddModal()">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="selectedData" class="popup-overlay">
+  <div class="popup-content">
+    <h3>Edit Data</h3>
+    <form (ngSubmit)="updateData()">
+      <label for="name">Name:</label>
+      <input id="name" [(ngModel)]="selectedData.name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input id="email" [(ngModel)]="selectedData.email" name="email" required>
+
+      <label for="country">Country:</label>
+      <input id="country" [(ngModel)]="selectedData.country" name="country" required>
+
+      <button type="submit">Update</button>
+      <button type="button" (click)="selectedData = null">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<router-outlet></router-outlet> -->
+
+
+<app-home></app-home>
+
+<router-outlet></router-outlet>

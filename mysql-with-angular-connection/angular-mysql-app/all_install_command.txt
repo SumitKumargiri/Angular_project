@@ -1,0 +1,31 @@
++++++++++++++++++++++++++ backened side command +++++++++++++++++++++++++++
+
+npm install express mysql2             //install the mysql with express in backend side connection.
+
+npm install express --save             // install the express in backened side.
+
+npm init                               // initialize the json packages and repogitry.
+
+npm install mysql                     // use to install mysql server for connection to database backened side.
+
+npm install cors                     // use for middleware pass the http request and responses in backend side.
+
+
+
+++++++++++++++++++++++++  frontened side command +++++++++++++++++++++++
+
+ng new --no-standalone              //no standalone project install in angular.
+
+ng new projectname                 // install the new project in angular.
+
+npm install -g @angular/cli          // install the angular cli.
+
+npm install @angular/animations        //use for angular animation.
+
+npm install ngx-toastr                //use for install toastr message just like popup message.
+
+npm install js-sha512                  // use for install encrypt the password and convert the passwors longtext.
+
+
+
+                  
