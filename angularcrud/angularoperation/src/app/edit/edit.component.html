@@ -1,0 +1,16 @@
+<h2>Edit Data</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="rowData.name" name="name" />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="rowData.email" name="email" />
+  </div>
+  <div>
+    <label for="country">Country:</label>
+    <input type="text" id="country" [(ngModel)]="rowData.country" name="country" />
+  </div>
+  <button type="submit">Save</button>
+</form>
