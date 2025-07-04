@@ -1,0 +1,23 @@
+
+.navbar{
+    background-color: rgb(241, 239, 239);
+    border-radius: 8px;
+    margin-top: 5px;
+    outline-style: none;
+}
+
+.navbar ul{
+    display: flex;
+    margin-left: 600px;
+    gap: 32px;
+    margin-top: 10px;
+}
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+}
