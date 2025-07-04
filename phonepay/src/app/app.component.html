@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>PhonePe Payment</h2>
+
+  <!-- Payment Form -->
+  <div>
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="name" required />
+
+    <label>Mobile:</label>
+    <input type="text" [(ngModel)]="mobile" required />
+
+    <label>Amount:</label>
+    <input type="number" [(ngModel)]="amount" required />
+
+    <button (click)="initiatePayment()">Pay Now</button>
+  </div>
+
+  <!-- Transaction Details -->
+  <div *ngIf="transactionId">
+    <h3>Transaction Initiated</h3>
+    <p>Transaction ID: {{ transactionId }}</p>
+  </div>
+
+  <!-- Payment Status Check -->
+  <div>
+    <h2>Check Payment Status</h2>
+    <input type="text" [(ngModel)]="transactionId" placeholder="Enter Transaction ID" required />
+    <button (click)="checkPaymentStatus()">Check Status</button>
+  </div>
+
+  <!-- Status Response -->
+  <div *ngIf="statusResponse">
+    <h3>Payment Status:</h3>
+    <pre>{{ statusResponse | json }}</pre>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
